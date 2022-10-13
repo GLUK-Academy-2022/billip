@@ -1,9 +1,14 @@
 # academy-api-billip
 
-To see our team name:
+## Requirements:
 
- - 1. clone this repo
- - 2. in the cloned folder, run "npm install"
- - 3. run "node index.js"
- - 4. go to localhost:3000/hello 
- - 5. (if you have your own environment variable 'PORT') go to localhost:[YOUR PORT]/hello
+- Docker installed and running
+- A docker account
+
+## To see our team name:
+
+ 1. run these comands: 
+
+`docker run -p 3000:3000 -d --rm philwalton/dockbillip`
+
+`curl localhost:3000/hello`
