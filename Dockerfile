@@ -2,12 +2,12 @@ FROM node:13-alpine
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-
-COPY . .
+COPY package*.json .
 
 RUN npm install
 
+COPY ./exports .
+
 EXPOSE 3000
 
-CMD [ "node", "index.js" ]
+ENTRYPOINT [ "node", "index.js" ]
